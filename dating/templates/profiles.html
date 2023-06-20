@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align: center;">
+    <h1>Анкеты</h1>
+    <div style="margin: auto;">
+        {% for profiles in users %}
+            <div style="border: 2px solid;
+            width: 600px;
+            margin: auto;">
+                    <img src="https://cdn3.iconfinder.com/data/icons/user-2/100/10-1024.png"
+                    style="margin-top: 20px;
+                    width: 100px;
+                    height: 100px;
+                    background-color: white;">
+                <h2>Имя: {{ profiles.name }}<br>
+                    Фамилия: {{ profiles.surname }}<br>
+                    Возраст: {{ profiles.age }}<br>
+                    О себе: {{ profiles.about_me }}</h2>
+                <a href="{{ profiles.get_absolute_url }}"><button style="margin: auto;
+                margin-bottom: 15px;
+                padding: 10px;
+                font-size: 20px;">Читать анкету</button></a>
+            </div><br><br>
+        {% endfor %}
+    </div>
+    <a href="{% url 'reg' %}"><button style="margin: auto;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 25px;">Регистрация</button></a>
+</body>
+</html>

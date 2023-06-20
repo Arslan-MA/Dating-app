@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align: center;">
+    <h1 style="font-size: 45px;">Анкета</h1>
+    <div style="border: 2px solid;
+    width: 600px;
+    margin: auto;">
+        <img src="https://cdn3.iconfinder.com/data/icons/user-2/100/10-1024.png"
+             style="margin-top: 20px;
+             width: 200px;
+             height: 200px;
+             background-color: white;">
+        <h2 style="font-size: 30px;">Имя:</h2>
+        <p style="font-size: 25px;">{{ user.name }}</p>
+        <h2 style="font-size: 30px;">Фамилия:</h2>
+        <p style="font-size: 25px;">{{ user.surname }}</p>
+        <h2 style="font-size: 30px;">Возраст:</h2>
+        <p style="font-size: 25px;">{{ user.age }}</p>
+        <h2 style="font-size: 30px;">Профессия:</h2>
+        <p style="font-size: 25px;">{{ user.profession }}</p>
+        <h2 style="font-size: 30px;">Хобби:</h2>
+        <p style="font-size: 25px;">{{ user.hobby }}</p>
+        <h2 style="font-size: 30px;">О себе:</h2>
+        <p style="font-size: 25px;">{{ user.about_me }}</p>
+    </div><br><br>
+    <a href="{% url 'profiles' %}"><button style="margin: auto;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 25px;">Все анкеты</button></a>
+    <a href="{% url 'reg' %}"><button style="margin: auto;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 25px;">Регистрация</button></a>
+</body>
+</html>
